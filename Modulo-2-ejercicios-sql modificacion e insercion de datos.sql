@@ -1,0 +1,28 @@
+CREATE SCHEMA Modulo_2_ejercicios_5;
+USE Modulo_2_ejercicios_5;
+
+CREATE TABLE table_1 ( a INTEGER, b CHAR (10));
+
+ALTER TABLE table_1
+RENAME TO table_2;
+
+ALTER TABLE table_2 
+MODIFY COLUMN a TINYINT NOT NULL;
+
+ALTER TABLE table_2 
+CHANGE b c CHAR (20);
+
+ALTER TABLE table_2
+ADD COLUMN d TIMESTAMP;
+
+ALTER TABLE table_2
+DROP COLUMN c;
+
+CREATE TABLE table_3 LIKE table_2;
+
+DROP TABLE IF EXISTS table_2;
+
+ALTER TABLE table_3
+RENAME TO table_1;
+
+
